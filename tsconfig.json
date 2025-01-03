@@ -4,7 +4,18 @@
     "moduleResolution": "node",
     "types": ["react", "react-dom", "@emotion/react/types/css-prop"],
     "jsx": "react-jsx",
-    "jsxImportSource": "@emotion/react"
+    "jsxImportSource": "@emotion/react",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@assets/*": ["src/assets/*"],
+      "@styles/*": ["src/styles/*"],
+      "@utils/*": ["src/utils/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@pages/*": ["src/pages/*"],
+      "@components/*": ["src/pages/*"]
+    }
   },
+  "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
