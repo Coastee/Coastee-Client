@@ -2,8 +2,9 @@
   "files": [],
   "compilerOptions": {
     "moduleResolution": "node",
+    "types": ["react", "react-dom", "@emotion/react/types/css-prop"],
     "jsx": "react-jsx",
-    "types": ["react", "react-dom"]
+    "jsxImportSource": "@emotion/react"
   },
   "references": [{ "path": "./tsconfig.node.json" }]
 }
