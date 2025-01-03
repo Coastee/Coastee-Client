@@ -1,7 +1,12 @@
-import React from "react";
+import { globalStyle } from "@/styles/globalStyle";
+import { Global } from "@emotion/react";
 
 const App = () => {
-  return <div></div>;
+  return (
+    <>
+      <Global styles={globalStyle} />
+    </>
+  );
 };
 
 export default App;
