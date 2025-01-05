@@ -6,7 +6,7 @@ import App from "@/App";
 import { globalStyle } from "@/styles/globalStyle";
 import { theme } from "@/styles/theme/theme";
 import { Global, ThemeProvider } from "@emotion/react";
-import React = require("react");
+import React from "react";
 
 const queryClient = new QueryClient();
 
