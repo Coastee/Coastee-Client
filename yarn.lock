@@ -1544,9 +1544,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"coastee-client@workspace:.":
+"coaster-client@workspace:.":
   version: 0.0.0-use.local
-  resolution: "coastee-client@workspace:."
+  resolution: "coaster-client@workspace:."
   dependencies:
     "@biomejs/biome": "npm:1.9.4"
     "@emotion/react": "npm:^11.14.0"
