@@ -17,6 +17,7 @@ export const globalStyle = css`
 
   html,
   body {
+    color: #fff;
     font-size: 62.5%;
     font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI",
       Roboto, "Helvetica Neue", Arial, sans-serif;
