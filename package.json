@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "biome lint --write ./src",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "svgr": "npx @svgr/cli -d src/assets/svg --ignore-existing --typescript --no-dimensions public/svg"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -27,7 +28,8 @@
     "@yarnpkg/sdks": "^3.2.0",
     "globals": "^15.14.0",
     "typescript": "~5.6.2",
-    "vite": "^6.0.6"
+    "vite": "^6.0.6",
+    "vite-plugin-svgr": "^4.3.0"
   },
   "packageManager": "yarn@4.6.0"
 }
