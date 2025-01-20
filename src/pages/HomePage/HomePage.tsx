@@ -1,10 +1,15 @@
-import { titleStyle, body1Style, body2Style, body3Style } from "./HomePage.css";
+import {
+  titleStyle,
+  body1Style,
+  body2Style,
+  body3Style,
+} from "./HomePage.styles";
 import { logo1, logo2, logo3 } from "@/assets/logos";
 
 export const HomePage = () => {
   return (
-    <div>
-      <h1 css={titleStyle}>타이틀입니다</h1>
+    <div css={{ backgroundColor: "#1D2229" }}>
+      <p css={titleStyle}>타이틀입니다</p>
       <p css={body1Style}>body1입니다</p>
       <p css={body2Style}>body2입니다</p>
       <p css={body3Style}>body3입니다</p>

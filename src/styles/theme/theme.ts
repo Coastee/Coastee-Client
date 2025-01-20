@@ -1,3 +1,5 @@
+import { css } from "@emotion/react";
+
 const color = {
   // White
   white: "#ffffff",
@@ -26,14 +28,29 @@ const color = {
   primaryPink1: "#ff6593",
 };
 
-const fontSize = {
-  title: "32px",
-  body1: "16px",
-  body2: "14px",
-  body3: "12px",
+const font = {
+  title: css({
+    fontSize: "3.2rem",
+    letterSpacing: "-0.64px",
+  }),
+
+  body1: css({
+    fontSize: "1.6rem",
+    letterSpacing: "-0.32px",
+  }),
+
+  body2: css({
+    fontSize: "1.4rem",
+    letterSpacing: "-0.28px",
+  }),
+
+  body3: css({
+    fontSize: "1.2rem",
+    letterSpacing: "-0.24px",
+  }),
 };
 
 export const theme = {
   color,
-  fontSize,
+  font,
 };
