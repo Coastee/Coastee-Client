@@ -30,13 +30,22 @@ export const textareaStyle = css`
   height: 100%;
 
   resize: none;
+
+  color: ${theme.color.white};
+
+  ::placeholder {
+    ${theme.font.body1};
+    color: ${theme.color.gray1};
+  }
 `;
 
 export const countStyle = css`
+  display: flex;
   position: absolute;
 
-  right: 0;
-  bottom: 0;
+  right: 1.5rem;
+  bottom: 1.2rem;
 
-  ${theme.font.body3}
+  ${theme.font.body3};
+  color: ${theme.color.gray1};
 `;

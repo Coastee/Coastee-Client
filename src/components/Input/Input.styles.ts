@@ -36,14 +36,18 @@ export const inputStyle = css`
   display: flex;
   width: 100%;
 
+  align-items: center;
+
   border: none;
 
-  color: ${theme.color.gray1};
+  color: ${theme.color.white};
   background-color: transparent;
+
+  ${theme.font.body1};
 
   outline: none;
 
   ::placeholder {
-    ${theme.font.body1};
+    color: ${theme.color.gray1};
   }
 `;
