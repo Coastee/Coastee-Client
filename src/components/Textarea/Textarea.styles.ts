@@ -5,8 +5,7 @@ export const wrapperStyle = (isError: boolean) => css`
   position: relative;
   display: flex;
 
-  width: 35rem;
-  height: 10rem;
+  width: 100%;
 
   padding: 1.55rem 1.8rem;
 

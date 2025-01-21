@@ -9,7 +9,7 @@ export const wrapperStyle = (
   position: relative;
   display: flex;
 
-  width: 35rem;
+  width: 100%;
   height: 5rem;
 
   padding: 1.55rem 1.8rem;
@@ -34,6 +34,7 @@ export const wrapperStyle = (
 
 export const inputStyle = css`
   display: flex;
+
   width: 100%;
 
   align-items: center;
