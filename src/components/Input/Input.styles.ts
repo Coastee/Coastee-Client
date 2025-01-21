@@ -18,4 +18,10 @@ export const inputStyle = css`
   ::placeholder {
     ${theme.font.body1};
   }
+
+  :focus {
+    border: 1px solid ${theme.color.primaryBlue3};
+
+    transition: 0.2s ease-in-out;
+  }
 `;
