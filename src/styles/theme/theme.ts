@@ -1,6 +1,9 @@
 import { css } from "@emotion/react";
 
 const color = {
+  // Black
+  black: "#000000",
+
   // White
   white: "#ffffff",
   white1: "#f6f6f6",
@@ -13,17 +16,18 @@ const color = {
   gray3: "#969696",
   gray4: "#666666",
 
-  // Dark-Blue
-  darkBlue0: "#2b3340",
-  darkBlue1: "#1d2229",
-
-  // Black
-  black: "#000000",
+  // Dark
+  dark0: "#5a769f",
+  dark1: "#4a6285",
+  dark2: "#3f4b5d",
+  dark3: "#2b3340",
+  dark4: "#1d2229",
 
   // Primary
-  primaryBlue0: "#9fb3ff",
-  primaryBlue1: "#6b8afd",
-  primaryBlue2: "#3d66ff",
+  primaryBlue0: "#b6cbff",
+  primaryBlue1: "#9fb3ff",
+  primaryBlue2: "#6b8afd",
+  primaryBlue3: "#3d66ff",
   primaryPink0: "#ff9fbc",
   primaryPink1: "#ff6593",
 };
