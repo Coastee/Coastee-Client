@@ -1,5 +1,5 @@
+import { MenuHeader, ServerHeader } from "@/components";
 import * as s from "./HomePage.styles";
-import { ServerHeader, MenuHeader } from "@/components";
 
 export const HomePage = () => {
   return (

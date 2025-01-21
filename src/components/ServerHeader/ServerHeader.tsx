@@ -1,36 +1,45 @@
+import { PlusIcon } from "@/assets/svg";
+import { SERVERINFO, ServerInfoType } from "@/constants/serverInfo";
+import { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import {
   containerStyle,
-  serverListStyle,
-  serverItemStyle,
   plusButtonStyle,
+  serverItemStyle,
+  serverListStyle,
 } from "./ServerHeader.styles";
-import { Logo1Icon, Logo2Icon, Logo3Icon, PlusIcon } from "@/assets/svg";
-
-const serverData = [
-  {
-    id: 1,
-    name: "server1",
-    icon: Logo1Icon,
-  },
-  {
-    id: 2,
-    name: "server2",
-    icon: Logo2Icon,
-  },
-  {
-    id: 3,
-    name: "server3",
-    icon: Logo3Icon,
-  },
-];
 
 const ServerHeader = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const [myServerId, setMyServerId] = useState<number[]>([1, 4, 5, 7]); // dummy data
+  const myServerSet = new Set(myServerId);
+
+  const handleNavigate = (serverId: number) => {
+    let pathWithoutServer = location.pathname.replace(/^\/\d+(\/|$)/, "/");
+    if (!pathWithoutServer || pathWithoutServer === "/") {
+      pathWithoutServer = "/home";
+    }
+    navigate(`/${serverId}${pathWithoutServer}`);
+  };
+  
   return (
     <div css={containerStyle}>
       <ul css={serverListStyle}>
-        {serverData.map((server) => {
+        {SERVERINFO.filter((server: ServerInfoType) =>
+          myServerSet.has(server.id)
+        ).map((server: ServerInfoType) => {
           const Icon = server.icon;
-          return <Icon key={server.id} css={serverItemStyle} />;
+          return (
+            <li
+              key={server.id}
+              css={serverItemStyle}
+              onClick={() => handleNavigate(server.id)}
+            >
+              <Icon />
+            </li>
+          );
         })}
       </ul>
       <PlusIcon css={plusButtonStyle} />

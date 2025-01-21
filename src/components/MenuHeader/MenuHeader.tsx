@@ -1,38 +1,44 @@
+import { Logo4Icon } from "@/assets/svg";
+import { MENU } from "@/constants/menu";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import {
+  activeMenuItemStyle,
   containerStyle,
   logoStyle,
-  menuListStyle,
   menuItemStyle,
+  menuListStyle,
 } from "./MenuHeader.styles";
-import { Logo4Icon, HomeIcon, CoffeeIcon, ChatIcon } from "@/assets/svg";
-
-const menuData = [
-  {
-    id: 1,
-    name: "홈",
-    icon: HomeIcon,
-  },
-  {
-    id: 2,
-    name: "그룹 챗",
-    icon: ChatIcon,
-  },
-  {
-    id: 3,
-    name: "오프라인 모임",
-    icon: CoffeeIcon,
-  },
-];
 
 const MenuHeader = () => {
+  const navigate = useNavigate();
+  const { serverId } = useParams<{ serverId: string }>();
+  const location = useLocation();
+
+  const handleNavigate = (relativePath: string) => {
+    if (serverId) {
+      navigate(`/${serverId}/${relativePath}`);
+    }
+  };
+
+  const isActiveMenu = (relativePath: string) => {
+    return location.pathname.startsWith(`/${serverId}/${relativePath}`);
+  };
+
   return (
     <div css={containerStyle}>
       <Logo4Icon css={logoStyle} />
       <ul css={menuListStyle}>
-        {menuData.map((menu) => {
+        {MENU.map((menu) => {
           const Icon = menu.icon;
           return (
-            <li key={menu.id} css={menuItemStyle}>
+            <li
+              key={menu.id}
+              css={[
+                menuItemStyle,
+                isActiveMenu(menu.path) && activeMenuItemStyle,
+              ]}
+              onClick={() => handleNavigate(menu.path)}
+            >
               <Icon />
               <span>{menu.name}</span>
             </li>
