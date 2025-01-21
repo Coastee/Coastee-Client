@@ -1,21 +1,14 @@
 import { theme } from "@/styles/theme/theme";
 import { css } from "@emotion/react";
 
-export const wrapperStyle = (
-  hasLeftIcon: boolean,
-  hasRightIcon: boolean,
-  isError: boolean
-) => css`
+export const wrapperStyle = (isError: boolean) => css`
   position: relative;
   display: flex;
 
   width: 35rem;
-  height: 5rem;
+  height: 10rem;
 
   padding: 1.55rem 1.8rem;
-
-  gap: ${hasLeftIcon && "1.35rem"};
-  justify-content: ${hasRightIcon && "space-between"};
 
   align-items: center;
 
@@ -32,18 +25,18 @@ export const wrapperStyle = (
   }
 `;
 
-export const inputStyle = css`
-  display: flex;
+export const textareaStyle = css`
   width: 100%;
+  height: 100%;
 
-  border: none;
+  resize: none;
+`;
 
-  color: ${theme.color.gray1};
-  background-color: transparent;
+export const countStyle = css`
+  position: absolute;
 
-  outline: none;
+  right: 0;
+  bottom: 0;
 
-  ::placeholder {
-    ${theme.font.body1};
-  }
+  ${theme.font.body3}
 `;

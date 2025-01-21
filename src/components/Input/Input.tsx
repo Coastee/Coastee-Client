@@ -1,4 +1,4 @@
-import { inputStyle, wrapperStyle } from "@/components/Input/Input.styles";
+import * as s from "@/components/Input/Input.styles";
 import type { InputHTMLAttributes, ReactNode } from "react";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
@@ -16,17 +16,18 @@ const Input = ({
   placeholder,
   id,
   value,
+  maxLength,
   ...props
 }: InputProps) => {
   return (
-    <div css={wrapperStyle(!!leftIcon, !!rightIcon, isError)}>
+    <div css={s.wrapperStyle(!!leftIcon, !!rightIcon, isError)}>
       {leftIcon}
       <input
-        css={inputStyle}
+        css={s.inputStyle}
         placeholder={placeholder}
         id={id}
         value={value}
-        {...props}
+        {...(props as InputHTMLAttributes<HTMLInputElement>)}
       />
       <div css={{ cursor: "pointer" }}>{rightIcon}</div>
     </div>
