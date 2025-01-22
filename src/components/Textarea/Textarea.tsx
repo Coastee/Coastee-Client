@@ -44,6 +44,7 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
           maxLength={maxLength}
           value={text}
           onChange={handleChange}
+          tabIndex={0}
           {...props}
         />
         {maxLength && (

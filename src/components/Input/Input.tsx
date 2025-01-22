@@ -11,6 +11,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   leftIcon?: ReactNode;
   rightIcon?: ReactNode;
 }
+
 const Input = forwardRef<HTMLInputElement, InputProps>(
   (
     {
@@ -34,6 +35,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           id={id}
           ref={ref}
           value={value}
+          tabIndex={0}
           {...props}
         />
         <div css={{ cursor: "pointer" }}>{rightIcon}</div>
