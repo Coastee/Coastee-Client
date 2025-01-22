@@ -1,10 +1,13 @@
 import * as s from "./HomePage.styles";
-import { ServerHeader } from "@/components/ServerHeader/ServerHeader";
+import { ServerHeader, MenuHeader } from "@/components";
 
 export const HomePage = () => {
   return (
     <div css={s.containerStyle}>
-      <ServerHeader />
+      <div css={s.HeaderListStyle}>
+        <ServerHeader />
+        <MenuHeader />
+      </div>
     </div>
   );
 };

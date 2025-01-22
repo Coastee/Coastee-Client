@@ -5,5 +5,6 @@ export { default as Logo1Icon } from "./Logo1Icon";
 export { default as Logo2Icon } from "./Logo2Icon";
 export { default as Logo3Icon } from "./Logo3Icon";
 export { default as RotateLogoIcon } from "./RotateLogoIcon";
+export { default as Logo4Icon } from "./Logo4Icon";
 export { default as PlusIcon } from "./PlusIcon";
 export { default as Vite } from "./Vite";
