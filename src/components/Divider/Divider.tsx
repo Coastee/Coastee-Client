@@ -1,8 +1,4 @@
-import {
-  childrenStyle,
-  dividerStyle,
-  wrapperStyle,
-} from "@/components/Divider/Divider.style";
+import * as s from "@/components/Divider/Divider.style";
 
 import type { HTMLAttributes } from "react";
 
@@ -12,10 +8,10 @@ interface DividerProps extends HTMLAttributes<HTMLHRElement> {
 
 const Divider = ({ variant = "single", children }: DividerProps) => {
   return (
-    <div css={wrapperStyle(variant)}>
-      <hr css={dividerStyle} />
-      {variant === "date" && <p css={childrenStyle}>{children}</p>}
-      <hr css={dividerStyle} />
+    <div css={s.wrapperStyle(variant)}>
+      <hr css={s.dividerStyle} />
+      {variant === "date" && <p css={s.childrenStyle}>{children}</p>}
+      <hr css={s.dividerStyle} />
     </div>
   );
 };
