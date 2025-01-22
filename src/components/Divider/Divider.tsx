@@ -14,7 +14,7 @@ const Divider = ({ variant = "single", children }: DividerProps) => {
   return (
     <div css={wrapperStyle(variant)}>
       <hr css={dividerStyle} />
-      <p css={childrenStyle}>{children}</p>
+      {variant === "date" && <p css={childrenStyle}>{children}</p>}
       <hr css={dividerStyle} />
     </div>
   );
