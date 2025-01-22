@@ -1,4 +1,4 @@
-const PLACEHOLDER = {
+export const PLACEHOLDER = {
   NAME: "이름",
   NICKNAME: "닉네임 (2~10자)",
   BIRTH: "생년월일 (YYYY.MM.DD)",
