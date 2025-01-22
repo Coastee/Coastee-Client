@@ -26,6 +26,7 @@ export const serverItemStyle = css`
   aspect-ratio: 1;
   border: 1px solid ${theme.color.dark0};
   border-radius: 1rem;
+  cursor: pointer;
   
   :hover {
     scale: 1.1;

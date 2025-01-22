@@ -30,11 +30,12 @@ export const menuItemStyle = css`
   padding: 1.8rem 2rem;
   border: 1px solid ${theme.color.dark1};
   border-radius: 1rem;
+  cursor: pointer;
   transition: border-color 0.3s ease, background-color 0.3s ease;
 
   svg {
     height: 100%;
-    
+
     path {
       fill: ${theme.color.primaryBlue1};
       transition: fill 0.3s ease; 
