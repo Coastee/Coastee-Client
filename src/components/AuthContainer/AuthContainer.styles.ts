@@ -36,9 +36,6 @@ export const logo1Style = css`
    animation:
     ${fallDownAnimation} 2.5s ease-in-out forwards,
     ${floatAnimation} 2s ease-in-out infinite 5s;
-
-  transform-origin: center;
-  will-change: transform;
 `;
 
 export const logo2Style = css`
@@ -52,9 +49,6 @@ export const logo2Style = css`
 
   animation: ${fallDownAnimation} 5s ease-in-out forwards,
   ${floatAnimation} 3s ease-in-out infinite 5s;
-
-  transform-origin: center;
-  will-change: transform;
 
 `;
 
