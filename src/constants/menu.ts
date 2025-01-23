@@ -9,7 +9,7 @@ export const MENU = [
   },
   {
     id: "group-chat",
-    name: "그룹 챗",
+    name: "그룹챗",
     icon: ChatIcon,
     path: "group-chat",
   },
