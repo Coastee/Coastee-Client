@@ -1,49 +1,45 @@
 import { PlusIcon } from "@/assets/svg";
-import { SERVERINFO, ServerInfoType } from "@/constants/serverInfo";
+import { SERVERINFO } from "@/constants/serverInfo";
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import {
-  containerStyle,
-  plusButtonStyle,
-  serverItemStyle,
-  serverListStyle,
-} from "./ServerHeader.styles";
+import * as s from "./ServerHeader.styles";
 
 const ServerHeader = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const [myServerId, setMyServerId] = useState<number[]>([1, 4, 5, 7]); // dummy data
-  const myServerSet = new Set(myServerId);
+  const [myServers, setMyServers] = useState([1, 4, 5, 9]); // dummy data
+  const myServerSet = new Set(myServers);
 
   const handleNavigate = (serverId: number) => {
-    let pathWithoutServer = location.pathname.replace(/^\/\d+(\/|$)/, "/");
-    if (!pathWithoutServer || pathWithoutServer === "/") {
-      pathWithoutServer = "/home";
-    }
-    navigate(`/${serverId}${pathWithoutServer}`);
+    const menu = location.pathname.replace(/^\/\d+(\/|$)/, "/") || "/home";
+    navigate(`/${serverId}${menu}`);
   };
-  
+
+  const filteredServers = SERVERINFO.filter((server) =>
+    myServerSet.has(server.id)
+  );
+
   return (
-    <div css={containerStyle}>
-      <ul css={serverListStyle}>
-        {SERVERINFO.filter((server: ServerInfoType) =>
-          myServerSet.has(server.id)
-        ).map((server: ServerInfoType) => {
-          const Icon = server.icon;
+    <header css={s.containerStyle}>
+      <div css={s.serverListStyle}>
+        {filteredServers.map((server) => {
           return (
-            <li
+            <button
               key={server.id}
-              css={serverItemStyle}
+              type="button"
+              css={s.serverItemStyle}
               onClick={() => handleNavigate(server.id)}
             >
-              <Icon />
-            </li>
+              <server.icon />
+            </button>
           );
         })}
-      </ul>
-      <PlusIcon css={plusButtonStyle} />
-    </div>
+      </div>
+      <button type="button" css={s.plusButtonStyle}>
+        <PlusIcon />
+      </button>
+    </header>
   );
 };
 
