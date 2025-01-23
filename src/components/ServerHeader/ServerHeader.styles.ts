@@ -1,5 +1,5 @@
-import { css } from "@emotion/react";
 import { theme } from "@/styles/theme/theme";
+import { css } from "@emotion/react";
 
 export const containerStyle = css`
   display: flex;
@@ -11,7 +11,6 @@ export const containerStyle = css`
   padding: 4.4rem 1.8rem;
   border-radius: 0rem 2.5rem 2.5rem 0rem;
   background: ${theme.color.dark2};
-
 `;
 
 export const serverListStyle = css`
@@ -26,8 +25,7 @@ export const serverItemStyle = css`
   aspect-ratio: 1;
   border: 1px solid ${theme.color.dark0};
   border-radius: 1rem;
-  cursor: pointer;
-  
+
   :hover {
     scale: 1.1;
     transition: scale 0.3s ease;
@@ -35,6 +33,16 @@ export const serverItemStyle = css`
 `;
 
 export const plusButtonStyle = css`
-  width: 2rem;
-  height: 2rem;
+  width: 4rem;
+  height: 4rem;
+  padding: 1rem;
+
+  :hover {
+    scale: 1.2;
+    transition: scale 0.1s ease;
+
+    svg path {
+      stroke: ${theme.color.white};
+    }
+  }
 `;
