@@ -1,51 +1,44 @@
 import { Logo4Icon } from "@/assets/svg";
 import { MENU } from "@/constants/menu";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
-import {
-  activeMenuItemStyle,
-  containerStyle,
-  logoStyle,
-  menuItemStyle,
-  menuListStyle,
-} from "./MenuHeader.styles";
+import * as s from "./MenuHeader.styles";
 
 const MenuHeader = () => {
   const navigate = useNavigate();
-  const { serverId } = useParams<{ serverId: string }>();
   const location = useLocation();
+  const { serverId } = useParams();
 
-  const handleNavigate = (relativePath: string) => {
-    if (serverId) {
-      navigate(`/${serverId}/${relativePath}`);
-    }
+  const handleNavigate = (menu: string) => {
+    if (!serverId) return;
+    navigate(`/${serverId}/${menu}`);
   };
 
-  const isActiveMenu = (relativePath: string) => {
-    return location.pathname.startsWith(`/${serverId}/${relativePath}`);
+  const isActiveMenu = (menu: string) => {
+    return location.pathname.startsWith(`/${serverId}/${menu}`);
   };
 
   return (
-    <div css={containerStyle}>
-      <Logo4Icon css={logoStyle} />
-      <ul css={menuListStyle}>
+    <header css={s.containerStyle}>
+      <Logo4Icon />
+      <div css={s.menuListStyle}>
         {MENU.map((menu) => {
-          const Icon = menu.icon;
           return (
-            <li
+            <button
               key={menu.id}
+              type="button"
               css={[
-                menuItemStyle,
-                isActiveMenu(menu.path) && activeMenuItemStyle,
+                s.menuItemStyle,
+                isActiveMenu(menu.path) && s.activeMenuItemStyle,
               ]}
               onClick={() => handleNavigate(menu.path)}
             >
-              <Icon />
+              <menu.icon />
               <span>{menu.name}</span>
-            </li>
+            </button>
           );
         })}
-      </ul>
-    </div>
+      </div>
+    </header>
   );
 };
 
