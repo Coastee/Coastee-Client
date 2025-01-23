@@ -1,3 +1,9 @@
+import OnBoardingPage from "@/pages/OnboardingPage/OnboardingPage";
 import { createBrowserRouter } from "react-router-dom";
 
-export const router = createBrowserRouter([]);
+export const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <OnBoardingPage />,
+  },
+]);
