@@ -6,14 +6,14 @@ import * as s from "./ServerHeader.styles";
 
 const ServerHeader = () => {
   const navigate = useNavigate();
-  const location = useLocation();
+  const { pathname } = useLocation();
 
   const [myServers, setMyServers] = useState([1, 4, 5, 9]); // dummy data
   const myServerSet = new Set(myServers);
 
   const handleNavigate = (serverId: number) => {
-    const menu = location.pathname.replace(/^\/\d+(\/|$)/, "/") || "/home";
-    navigate(`/${serverId}${menu}`);
+    const menu = pathname.split("/")[2] || "home";
+    navigate(`/${serverId}/${menu}`);
   };
 
   const filteredServers = SERVERINFO.filter((server) =>
