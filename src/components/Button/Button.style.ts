@@ -54,4 +54,11 @@ export const variantStyles: Record<
       scale: 1.01;
     }
   `,
+  text: css`
+    padding: 1rem;
+
+    ${theme.font.body1}
+    text-decoration: underline;
+    color: ${theme.color.primaryBlue1};
+  `,
 };
