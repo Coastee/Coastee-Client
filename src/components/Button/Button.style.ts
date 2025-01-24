@@ -7,7 +7,7 @@ export const buttonStyle = css`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.8rem;
 
   padding: 1rem 2.6rem;
 
