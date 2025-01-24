@@ -9,13 +9,21 @@ export const buttonStyle = css`
   align-items: center;
   gap: 0.4rem;
 
+  padding: 1rem 2.6rem;
+
   border-radius: 10px;
 
+  ${theme.font.body1};
   font-weight: 500;
+  color: ${theme.color.white};
 
   white-space: nowrap;
 
   transition: all 0.1s ease-in;
+
+  &:hover {
+    scale: 1.02;
+  }
 `;
 
 export const variantStyles: Record<
@@ -23,42 +31,27 @@ export const variantStyles: Record<
   ReturnType<typeof css>
 > = {
   primary: css`
-    padding: 1rem 2.6rem;
-
-    ${theme.font.body1};
-    color: ${theme.color.white};
-    font-weight: 500;
-
     background-color: ${theme.color.primaryBlue2};
 
     &:hover {
-      scale: 1.01;
-
       background-color: ${theme.color.primaryBlue3};
     }
   `,
+
   secondary: css`
-    padding: 1rem 2.6rem;
-
     border: 1px solid ${theme.color.dark1};
-
-    ${theme.font.body1};
-    color: ${theme.color.white};
-    font-weight: 500;
 
     background-color: ${theme.color.dark3};
 
     &:hover {
       background-color: ${theme.color.dark2};
-
-      scale: 1.01;
     }
   `,
+
   text: css`
     padding: 1rem;
 
-    ${theme.font.body1}
-    text-decoration: underline;
     color: ${theme.color.primaryBlue1};
+    text-decoration: underline;
   `,
 };
