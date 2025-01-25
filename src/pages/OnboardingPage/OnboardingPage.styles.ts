@@ -18,6 +18,8 @@ export const commonBtnStyle = css`
   font-weight: 500;
   ${theme.font.body1};
 
+  white-space: nowrap;
+
   cursor: pointer;
 `;
 

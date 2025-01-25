@@ -49,7 +49,6 @@ export const logo2Style = css`
 
   animation: ${fallDownAnimation} 5s ease-in-out forwards,
   ${floatAnimation} 3s ease-in-out infinite 5s;
-
 `;
 
 export const wrapperStyle = css`
@@ -91,6 +90,8 @@ export const titleStyle = css`
 
   font-weight: 600;
   ${theme.font.title};
+
+  white-space: nowrap;
 `;
 
 export const descStyle = css`
@@ -103,6 +104,8 @@ export const descStyle = css`
 
   font-weight: 400;
   ${theme.font.body1};
+
+  white-space: nowrap;
 `;
 
 export const childrenStyle = css`
