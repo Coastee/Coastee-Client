@@ -17,3 +17,7 @@ export const titleStyle = css`
   ${theme.font.title2};
   padding: 0.3rem;
 `;
+
+export const contentStyle = css`
+  padding-right: 1rem;
+`;

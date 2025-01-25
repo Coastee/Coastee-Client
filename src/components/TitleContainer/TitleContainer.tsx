@@ -1,3 +1,4 @@
+import { ArrowDownIcon } from "@/assets/svg";
 import { Button } from "@/components";
 import type { HTMLAttributes, ReactNode } from "react";
 import * as s from "./TitleContainer.style";
@@ -19,8 +20,12 @@ const TitleContainer = ({
       <div css={s.headerStyle}>
         <h1 css={s.titleStyle}>{title}</h1>
         <Button variant="text">{buttonText}</Button>
+        <Button variant="sorting">
+          <ArrowDownIcon width={10} />
+          최신순
+        </Button>
       </div>
-      {children}
+      <div css={s.contentStyle}>{children}</div>
     </div>
   );
 };
