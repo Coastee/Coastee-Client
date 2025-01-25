@@ -29,4 +29,11 @@ export const globalStyle = css`
   a {
     text-decoration: none;
   }
+
+  button {
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
 `;

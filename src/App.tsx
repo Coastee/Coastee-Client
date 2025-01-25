@@ -1,8 +1,14 @@
-import { router } from "@/routers/Router";
-import { RouterProvider } from "react-router-dom";
+import { MenuHeader, ServerHeader } from "@/components";
+import { Outlet } from "react-router-dom";
 
 const App = () => {
-  return <RouterProvider router={router} />;
+  return (
+    <div css={{ display: "flex" }}>
+      <ServerHeader />
+      <MenuHeader />
+      <Outlet />
+    </div>
+  );
 };
 
 export default App;
