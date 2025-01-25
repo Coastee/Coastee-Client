@@ -30,6 +30,10 @@ const color = {
   primaryBlue3: "#3d66ff",
   primaryPink0: "#ff9fbc",
   primaryPink1: "#ff6593",
+
+  // etc
+  yellow: "#FFD900",
+  green: "#04C75B",
 };
 
 const font = {
