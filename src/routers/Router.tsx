@@ -1,8 +1,19 @@
 import App from "@/App";
 import { HomePage } from "@/pages/HomePage/HomePage";
-import { createBrowserRouter } from "react-router-dom";
+import OnBoardingPage from "@/pages/OnboardingPage/OnboardingPage";
+import { Outlet, createBrowserRouter } from "react-router-dom";
 
 export const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Outlet />,
+    children: [
+      {
+        path: "/",
+        element: <OnBoardingPage />,
+      },
+    ],
+  },
   {
     path: "/",
     element: <App />,
