@@ -6,25 +6,39 @@ import * as s from "./TitleContainer.style";
 export interface TitleContainerProps extends HTMLAttributes<HTMLDivElement> {
   title?: string;
   buttonText?: string;
-  children: ReactNode;
+  filterText?: string;
+  handleButtonClick?: () => void;
+  handleFilterClick?: () => void;
+  children?: ReactNode;
 }
 
 const TitleContainer = ({
   title,
   buttonText,
+  filterText,
+  handleButtonClick,
+  handleFilterClick,
   children,
   ...props
 }: TitleContainerProps) => {
   return (
     <div css={s.titleContainerStyle} {...props}>
-      <div css={s.headerStyle}>
-        <h1 css={s.titleStyle}>{title}</h1>
-        <Button variant="text">{buttonText}</Button>
-        <Button variant="sorting">
-          <ArrowDownIcon width={10} />
-          최신순
-        </Button>
-      </div>
+      {title && (
+        <div css={s.headerStyle}>
+          <h1 css={s.titleStyle}>{title}</h1>
+          {buttonText && (
+            <Button variant="text" onClick={handleButtonClick}>
+              {buttonText}
+            </Button>
+          )}
+          {filterText && (
+            <Button variant="sorting" onClick={handleFilterClick}>
+              <ArrowDownIcon width={10} />
+              {filterText}
+            </Button>
+          )}
+        </div>
+      )}
       <div css={s.contentStyle}>{children}</div>
     </div>
   );
