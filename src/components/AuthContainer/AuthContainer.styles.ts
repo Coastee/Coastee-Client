@@ -35,7 +35,7 @@ export const logo1Style = css`
 
    animation:
     ${fallDownAnimation} 2.5s ease-in-out forwards,
-    ${floatAnimation} 2s ease-in-out infinite 5s;
+    ${floatAnimation} 2s ease-in-out infinite 3.8s;
 `;
 
 export const logo2Style = css`
@@ -47,8 +47,8 @@ export const logo2Style = css`
   width: 61.6rem;
   height: 72.8rem;
 
-  animation: ${fallDownAnimation} 5s ease-in-out forwards,
-  ${floatAnimation} 3s ease-in-out infinite 5s;
+  animation: ${fallDownAnimation} 3.5s ease-in-out forwards,
+  ${floatAnimation} 3s ease-in-out infinite 3.8s;
 `;
 
 export const wrapperStyle = css`
