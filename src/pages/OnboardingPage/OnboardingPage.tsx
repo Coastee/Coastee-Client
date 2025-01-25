@@ -13,7 +13,7 @@ const OnBoardingPage = () => {
           </>
         }
       >
-        <div css={{ display: "flex", flexDirection: "column", gap: "1.8rem" }}>
+        <div css={s.sideStyle}>
           <button type="button" aria-label="Google로 시작하기" css={[s.commonBtnStyle, s.googleBtnStyle]}>
             <GoogleIcon width={22} height={22} />
             Google로 시작하기

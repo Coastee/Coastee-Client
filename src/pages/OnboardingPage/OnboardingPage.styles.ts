@@ -21,6 +21,13 @@ export const commonBtnStyle = css`
   cursor: pointer;
 `;
 
+export const sideStyle = css`
+  display: flex;
+
+  flex-direction: column;
+  gap: 1.8rem;
+`;
+
 export const googleBtnStyle = css`
   border: 1px solid ${theme.color.dark1};
 
