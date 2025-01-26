@@ -20,6 +20,7 @@
     "strict": true,
     "skipLibCheck": true,
     "module": "esnext",
+    "lib": ["DOM", "ES2017"],
     "target": "es6"
   },
   "include": ["src", "custom.d.ts"],
