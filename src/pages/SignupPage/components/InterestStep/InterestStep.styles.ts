@@ -16,6 +16,13 @@ export const boxWrapperStyle = css`
   margin: 0 0 3rem auto;
 `;
 
+export const boxLayoutStyle = css`
+  display: flex;
+
+  align-items: center;
+  gap: 1.2rem;
+`;
+
 export const labelStyle = css`
   ${theme.font.body1};
 

@@ -21,7 +21,7 @@ const InterestStep = ({ onPrev, onNext }: InterestStepProps) => {
     <AuthContainer title={TITLE.PROFILE} desc={DESC.INTEREST_INFO} size="large">
       <div css={s.boxWrapperStyle}>
         {INTERESTS.map((field) => (
-          <div key={field} css={{ display: "flex", gap: "1.2rem", alignItems: "center" }}>
+          <div key={field} css={s.boxLayoutStyle}>
             <CheckBox
               id={field}
               isChecked={selectedInterests.includes(field)}
@@ -33,7 +33,7 @@ const InterestStep = ({ onPrev, onNext }: InterestStepProps) => {
           </div>
         ))}
       </div>
-      <div css={{ display: "flex", gap: "2.6rem", justifyContent: "center" }}>
+      <div css={{ display: "flex", gap: "2.6rem" }}>
         <Button onClick={onPrev} variant="secondary">
           이전
         </Button>
