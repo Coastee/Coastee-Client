@@ -1,6 +1,4 @@
-import { Button } from "@/components";
-import AuthContainer from "@/components/AuthContainer/AuthContainer";
-import Input from "@/components/Input/Input";
+import { AuthContainer, Button, Input } from "@/components";
 import { PLACEHOLDER } from "@/constants/placeholder";
 import { DESC, TITLE } from "@/constants/signup";
 
