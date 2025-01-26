@@ -4,10 +4,11 @@ import * as s from "@/pages/SignupPage/components/InterestStep/InterestStep.styl
 import { useState } from "react";
 
 interface InterestStepProps {
+  onPrev: () => void;
   onNext: () => void;
 }
 
-const InterestStep = ({ onNext }: InterestStepProps) => {
+const InterestStep = ({ onPrev, onNext }: InterestStepProps) => {
   const [selectedInterests, setSelectedInterests] = useState<string[]>([]);
 
   const handleCheckboxChange = (interest: string) => {
@@ -33,6 +34,9 @@ const InterestStep = ({ onNext }: InterestStepProps) => {
         ))}
       </div>
       <div css={{ display: "flex", gap: "2.6rem", justifyContent: "center" }}>
+        <Button onClick={onPrev} variant="secondary">
+          이전
+        </Button>
         <Button variant="secondary" onClick={onNext}>
           선택 안 함
         </Button>

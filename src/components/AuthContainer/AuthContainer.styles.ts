@@ -97,7 +97,7 @@ export const titleStyle = css`
 export const descStyle = css`
   display: flex;
 
-  width: 17.4rem;
+  width: 18rem;
 
   align-items: center;
   gap: 0.3rem;

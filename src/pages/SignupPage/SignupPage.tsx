@@ -22,13 +22,14 @@ const SignupPage = () => {
         <InfoStep onNext={() => Funnel.setStep("step2")} />
       </Funnel.Step>
       <Funnel.Step name="step2">
-        <ProfileStep onNext={() => Funnel.setStep("step3")} />
+        <ProfileStep onPrev={() => Funnel.setStep("step1")} onNext={() => Funnel.setStep("step3")} />
       </Funnel.Step>
       <Funnel.Step name="step3">
-        <ContactStep onNext={() => Funnel.setStep("step4")} />
+        <ContactStep onPrev={() => Funnel.setStep("step2")} onNext={() => Funnel.setStep("step4")} />
       </Funnel.Step>
       <Funnel.Step name="step4">
-        <InterestStep onNext={() => navigate("/")} />
+        {/* 임의로 serverId 부여 */}
+        <InterestStep onPrev={() => Funnel.setStep("step3")} onNext={() => navigate("/:1/home")} />
       </Funnel.Step>
     </Funnel>
   );
