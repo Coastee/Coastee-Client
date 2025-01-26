@@ -47,4 +47,8 @@ export const countStyle = css`
 
   ${theme.font.body3};
   color: ${theme.color.gray1};
+
+  & > p {
+    ${theme.font.body3}
+  }
 `;

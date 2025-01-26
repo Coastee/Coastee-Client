@@ -1,5 +1,6 @@
 import { useFunnel } from "@/hooks/useFunnel";
 import InfoStep from "@/pages/SignupPage/components/InfoStep/InfoStep";
+import ProfileStep from "@/pages/SignupPage/components/ProfileStep/ProfileStep";
 import { useEffect } from "react";
 
 const SignupPage = () => {
@@ -16,7 +17,7 @@ const SignupPage = () => {
         <InfoStep onNext={() => Funnel.setStep("step2")} />
       </Funnel.Step>
       <Funnel.Step name="step2">
-        <div>Step 2 Content</div>
+        <ProfileStep />
       </Funnel.Step>
     </Funnel>
   );
