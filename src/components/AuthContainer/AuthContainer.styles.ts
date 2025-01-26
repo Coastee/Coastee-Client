@@ -74,7 +74,7 @@ export const sectionStyle = (size: "medium" | "large") => css`
   padding: 5rem 7.8rem 5rem 6rem;
 
   justify-content: space-between;
-  gap: 1.6rem;
+  gap: 5rem;
 
   border-radius: 2.5rem;
 
@@ -96,8 +96,10 @@ export const titleStyle = css`
 
 export const descStyle = css`
   display: flex;
-  align-items: center;
 
+  width: 17.4rem;
+
+  align-items: center;
   gap: 0.3rem;
 
   color: ${theme.color.white2};
