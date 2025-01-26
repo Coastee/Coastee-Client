@@ -1,7 +1,7 @@
 import { ArrowDownIcon } from "@/assets/svg";
 import { Button } from "@/components";
 import type { HTMLAttributes, ReactNode } from "react";
-import * as s from "./TitleContainer.style";
+import * as s from "./TitleContainer.styles";
 
 export interface TitleContainerProps extends HTMLAttributes<HTMLDivElement> {
   title: string;
