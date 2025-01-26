@@ -7,7 +7,6 @@ interface DropdownProps {
   setItem: (item: DropdownOptionTypes) => void;
   dropDownOpen: boolean;
   setDropdownOpen: (open: boolean) => void;
-  backgroundColor?: string;
 }
 
 const Dropdown: React.FC<DropdownProps> = ({
@@ -15,7 +14,6 @@ const Dropdown: React.FC<DropdownProps> = ({
   setItem,
   dropDownOpen,
   setDropdownOpen,
-  backgroundColor,
 }) => {
   const handleItemClick = (item: DropdownOptionTypes) => {
     setItem(item);
@@ -26,7 +24,6 @@ const Dropdown: React.FC<DropdownProps> = ({
     <div
       css={s.containerStyle}
       style={{
-        backgroundColor,
         display: dropDownOpen ? "flex" : "none",
       }}
     >
