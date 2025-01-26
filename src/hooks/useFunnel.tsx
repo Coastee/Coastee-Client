@@ -1,4 +1,4 @@
-import { type ReactElement, type ReactNode, isValidElement, useState } from "react";
+import { Children, type ReactElement, type ReactNode, isValidElement, useState } from "react";
 
 type FunnelStepProps = {
   name: string;
@@ -6,27 +6,27 @@ type FunnelStepProps = {
 };
 
 type FunnelComponent = {
-  (props: { children: ReactNode }): ReactElement | null;
-  Step: (props: FunnelStepProps) => ReactElement;
+  (props: { children: ReactNode }): ReactNode;
+  Step: (props: FunnelStepProps) => ReactNode;
   setStep: (step: string) => void;
 };
 
 export const useFunnel = () => {
-  const [step, setStep] = useState<string | null>(null);
+  const [step, setStep] = useState<string>("step1");
 
-  const Step = ({ name, children }: FunnelStepProps) => {
+  const Step = ({ children }: Omit<FunnelStepProps, "name">) => {
     return <>{children}</>;
   };
 
-  const Funnel = ({ children }: { children: ReactNode }): ReactElement | null => {
-    const stepsArray = Array.isArray(children) ? children : [children];
+  const Funnel = ({ children }: { children: ReactNode }): ReactNode => {
+    const steps = Children.toArray(children) as ReactElement<FunnelStepProps>[];
 
-    const targetStep = stepsArray.find(
+    const targetStep = steps.find(
       (child): child is ReactElement<FunnelStepProps> =>
         isValidElement<FunnelStepProps>(child) && child.props.name === step,
     );
 
-    return targetStep ?? null;
+    return targetStep;
   };
 
   return Object.assign(Funnel, { Step, setStep }) as FunnelComponent;
