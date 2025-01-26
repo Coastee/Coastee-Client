@@ -8,14 +8,15 @@ interface AuthContainerProps {
   title?: string;
   desc?: ReactNode;
   children?: ReactNode;
+  size?: "medium" | "large";
 }
 
-const AuthContainer = ({ title, desc, children }: AuthContainerProps) => {
+const AuthContainer = ({ title, desc, size = "medium", children }: AuthContainerProps) => {
   return (
     <div css={s.wrapperStyle} className="background">
       <img src={logo1Img} alt="로고1" css={s.logo1Style} />
       <img src={logo2Img} alt="로고2" css={s.logo2Style} />
-      <section css={s.sectionStyle}>
+      <section css={s.sectionStyle(size)}>
         <div css={s.sideStyle}>
           <Logo2WhiteIcon width={62} height={38} css={{ marginBottom: "3.2rem" }} />
           <h1 css={s.titleStyle}>{title}</h1>

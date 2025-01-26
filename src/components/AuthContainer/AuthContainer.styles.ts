@@ -65,11 +65,11 @@ export const wrapperStyle = css`
   overflow: hidden;
 `;
 
-export const sectionStyle = css`
+export const sectionStyle = (size: "medium" | "large") => css`
   display: flex;
 
   width: 81rem;
-  height: 43rem;
+  height: ${size === "large" ? "58.7rem" : "43rem"};
 
   padding: 5rem 7.8rem 5rem 6rem;
 
@@ -105,7 +105,7 @@ export const descStyle = css`
   font-weight: 400;
   ${theme.font.body1};
 
-  white-space: nowrap;
+  white-space: pre-line;
 `;
 
 export const childrenStyle = css`
@@ -114,6 +114,8 @@ export const childrenStyle = css`
   flex-direction: column;
   flex-grow: 1;
   gap: 1.8rem;
+
+  align-items: flex-end;
 
   padding-top: 7.1rem;
 `;
