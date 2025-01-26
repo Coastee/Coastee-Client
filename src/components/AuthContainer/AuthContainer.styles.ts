@@ -110,7 +110,7 @@ export const descStyle = css`
   white-space: pre-line;
 `;
 
-export const childrenStyle = css`
+export const childrenStyle = (size: "medium" | "large") => css`
   display: flex;
 
   flex-direction: column;
@@ -119,7 +119,7 @@ export const childrenStyle = css`
 
   align-items: flex-end;
 
-  padding-top: 7.1rem;
+  padding-top: ${size === "large" ? "3rem" : "7.1rem"};
 `;
 
 export const sideStyle = css`
@@ -127,5 +127,5 @@ export const sideStyle = css`
 
   flex-direction: column;
   flex-grow: 1;
-  gap: '2.1rem'
+  gap: 2.1rem
 `;

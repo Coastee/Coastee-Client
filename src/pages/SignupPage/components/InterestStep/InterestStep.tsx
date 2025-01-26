@@ -19,6 +19,9 @@ const InterestStep = ({ onPrev, onNext }: InterestStepProps) => {
 
   return (
     <AuthContainer title={TITLE.PROFILE} desc={DESC.INTEREST_INFO} size="large">
+      <Button variant="text" css={{ textDecoration: "none" }}>
+        초기화
+      </Button>
       <div css={s.boxWrapperStyle}>
         {INTERESTS.map((field) => (
           <div key={field} css={s.boxLayoutStyle}>

@@ -22,7 +22,7 @@ const AuthContainer = ({ title, desc, size = "medium", children }: AuthContainer
           <h1 css={s.titleStyle}>{title}</h1>
           <h2 css={s.descStyle}>{desc}</h2>
         </div>
-        <div css={s.childrenStyle}>{children}</div>
+        <div css={s.childrenStyle(size)}>{children}</div>
       </section>
     </div>
   );
