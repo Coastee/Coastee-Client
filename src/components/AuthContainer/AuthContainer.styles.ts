@@ -69,7 +69,7 @@ export const sectionStyle = css`
   display: flex;
 
   width: 81rem;
-  height: 38rem;
+  height: 43rem;
 
   padding: 5rem 7.8rem 5rem 6rem;
 
@@ -112,7 +112,8 @@ export const childrenStyle = css`
   display: flex;
 
   flex-direction: column;
-  gap: '1.8rem';
+  flex-grow: 1;
+  gap: 1.8rem;
 
   padding-top: 7.1rem;
 `;
@@ -121,5 +122,6 @@ export const sideStyle = css`
   display: flex;
 
   flex-direction: column;
+  flex-grow: 1;
   gap: '2.1rem'
 `;
