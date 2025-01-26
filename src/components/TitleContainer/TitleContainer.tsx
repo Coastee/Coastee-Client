@@ -4,7 +4,7 @@ import type { HTMLAttributes, ReactNode } from "react";
 import * as s from "./TitleContainer.style";
 
 export interface TitleContainerProps extends HTMLAttributes<HTMLDivElement> {
-  title?: string;
+  title: string;
   buttonText?: string;
   filterText?: string;
   handleButtonClick?: () => void;
@@ -23,22 +23,20 @@ const TitleContainer = ({
 }: TitleContainerProps) => {
   return (
     <div css={s.titleContainerStyle} {...props}>
-      {title && (
-        <div css={s.headerStyle}>
-          <h1 css={s.titleStyle}>{title}</h1>
-          {buttonText && (
-            <Button variant="text" onClick={handleButtonClick}>
-              {buttonText}
-            </Button>
-          )}
-          {filterText && (
-            <Button variant="sorting" onClick={handleFilterClick}>
-              <ArrowDownIcon width={10} />
-              {filterText}
-            </Button>
-          )}
-        </div>
-      )}
+      <div css={s.headerStyle}>
+        <h1 css={s.titleStyle}>{title}</h1>
+        {buttonText && (
+          <Button variant="text" onClick={handleButtonClick}>
+            {buttonText}
+          </Button>
+        )}
+        {filterText && (
+          <Button variant="sorting" onClick={handleFilterClick}>
+            <ArrowDownIcon width={10} />
+            {filterText}
+          </Button>
+        )}
+      </div>
       <div css={s.contentStyle}>{children}</div>
     </div>
   );
