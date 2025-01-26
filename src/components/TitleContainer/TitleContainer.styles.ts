@@ -12,6 +12,15 @@ export const headerStyle = css`
   margin: 0;
 `;
 
+export const sortingStyle = css`
+  display: flex;
+
+  flex-direction: column;
+  align-items: end;
+
+  margin-left: auto;
+`;
+
 export const titleStyle = css`
   padding: 0.3rem;
 

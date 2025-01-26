@@ -1,40 +1,70 @@
 import { ArrowDownIcon } from "@/assets/svg";
 import { Button } from "@/components";
+import {
+  type DropdownOptionTypes,
+  SORTING_OPTIONS,
+} from "@/constants/dropdown";
 import type { HTMLAttributes, ReactNode } from "react";
+import { useState } from "react";
+import Dropdown from "../Dropdown/Dropdown";
 import * as s from "./TitleContainer.styles";
 
 export interface TitleContainerProps extends HTMLAttributes<HTMLDivElement> {
   title: string;
-  buttonText?: string;
-  filterText?: string;
-  handleButtonClick?: () => void;
-  handleFilterClick?: () => void;
+  textButton?: string;
+  handleTextButtonClick?: () => void;
+  sortingOptions?: DropdownOptionTypes[];
+  sortingOption?: DropdownOptionTypes;
+  setSortingOption?: (option: DropdownOptionTypes) => void;
   children?: ReactNode;
 }
 
 const TitleContainer = ({
   title,
-  buttonText,
-  filterText,
-  handleButtonClick,
-  handleFilterClick,
+  textButton,
+  handleTextButtonClick,
+  sortingOptions,
+  sortingOption,
+  setSortingOption,
   children,
   ...props
 }: TitleContainerProps) => {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
   return (
     <div css={s.titleContainerStyle} {...props}>
       <div css={s.headerStyle}>
         <h1 css={s.titleStyle}>{title}</h1>
-        {buttonText && (
-          <Button variant="text" onClick={handleButtonClick}>
-            {buttonText}
+
+        {textButton && handleTextButtonClick && (
+          <Button variant="text" onClick={handleTextButtonClick}>
+            {textButton}
           </Button>
         )}
-        {filterText && (
-          <Button variant="sorting" onClick={handleFilterClick}>
-            <ArrowDownIcon width={10} />
-            {filterText}
-          </Button>
+
+        {sortingOptions && sortingOption && setSortingOption && (
+          <div css={s.sortingStyle}>
+            <Button
+              variant="sorting"
+              onClick={() => setDropdownOpen((prev) => !prev)}
+            >
+              <ArrowDownIcon
+                width={10}
+                style={{
+                  transform: dropdownOpen ? "rotate(180deg)" : "rotate(0deg)",
+                }}
+              />
+              {sortingOption.name}
+            </Button>
+            {dropdownOpen && (
+              <Dropdown
+                options={SORTING_OPTIONS}
+                setItem={setSortingOption}
+                dropDownOpen={dropdownOpen}
+                setDropdownOpen={setDropdownOpen}
+              />
+            )}
+          </div>
         )}
       </div>
       <div css={s.contentStyle}>{children}</div>
