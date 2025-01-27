@@ -37,8 +37,14 @@ const color = {
 };
 
 const font = {
-  title: css({
+  title1: css({
     fontSize: "3.2rem",
+    letterSpacing: "-0.64px",
+  }),
+
+  title2: css({
+    fontSize: "2.8rem",
+    fontWeight: 600,
     letterSpacing: "-0.64px",
   }),
 
