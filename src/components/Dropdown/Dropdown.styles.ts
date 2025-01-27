@@ -34,10 +34,11 @@ export const listBarStyle = css`
   ${theme.font.body2};
   color: ${theme.color.gray2};
 
+  cursor: pointer;
+
   &:hover {
     color: ${theme.color.white};
 
     background-color: ${theme.color.dark0};
   }
 `;
-

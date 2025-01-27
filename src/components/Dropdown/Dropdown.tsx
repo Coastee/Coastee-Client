@@ -21,24 +21,23 @@ const Dropdown: React.FC<DropdownProps> = ({
   };
 
   return (
-    <div
+    <ul
       css={s.containerStyle}
       style={{
         display: dropDownOpen ? "flex" : "none",
       }}
     >
       {options.map((option) => (
-        <button
+        <li
           key={option.id}
-          type="button"
           css={s.listBarStyle}
           onClick={() => handleItemClick(option)}
-          tabIndex={0}
+          onKeyDown={() => handleItemClick(option)}
         >
           {option.name}
-        </button>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 };
 
