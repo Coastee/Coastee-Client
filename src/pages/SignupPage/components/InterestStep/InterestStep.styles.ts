@@ -9,7 +9,6 @@ export const boxWrapperStyle = css`
 
   height: 33.8rem;
 
-
   row-gap: 2rem;
   column-gap: 1rem;
 
@@ -21,6 +20,8 @@ export const boxLayoutStyle = css`
 
   align-items: center;
   gap: 1.2rem;
+
+  cursor: pointer;
 `;
 
 export const labelStyle = css`

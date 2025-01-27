@@ -13,7 +13,9 @@ const InterestStep = ({ onPrev, onNext }: InterestStepProps) => {
 
   const handleCheckboxChange = (interest: string) => {
     setSelectedInterests((prev) =>
-      prev.includes(interest) ? prev.filter((item) => item !== interest) : [...prev, interest],
+      prev.includes(interest)
+        ? prev.filter((item) => item !== interest)
+        : [...prev, interest]
     );
   };
 
@@ -24,16 +26,14 @@ const InterestStep = ({ onPrev, onNext }: InterestStepProps) => {
       </Button>
       <div css={s.boxWrapperStyle}>
         {INTERESTS.map((field) => (
-          <div key={field} css={s.boxLayoutStyle}>
+          <label key={field} htmlFor={field} css={s.boxLayoutStyle}>
             <CheckBox
               id={field}
               isChecked={selectedInterests.includes(field)}
               onChange={() => handleCheckboxChange(field)}
             />
-            <label htmlFor={field} css={s.labelStyle}>
-              {field}
-            </label>
-          </div>
+            <span css={s.labelStyle}>{field}</span>
+          </label>
         ))}
       </div>
       <div css={{ display: "flex", gap: "2.6rem" }}>
