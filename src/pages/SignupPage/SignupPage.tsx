@@ -1,4 +1,7 @@
+import logo1Img from "@/assets/img/logo1Img.png";
+import logo2Img from "@/assets/img/logo2Img.png";
 import { useFunnel } from "@/hooks/useFunnel";
+import * as s from "@/pages/SignupPage/SignupPage.styles";
 import ContactStep from "@/pages/SignupPage/components/ContactStep/ContactStep";
 import InfoStep from "@/pages/SignupPage/components/InfoStep/InfoStep";
 import InterestStep from "@/pages/SignupPage/components/InterestStep/InterestStep";
@@ -11,21 +14,34 @@ const SignupPage = () => {
   const navigate = useNavigate();
 
   return (
-    <Funnel>
-      <Funnel.Step name="step1">
-        <InfoStep onNext={() => Funnel.setStep("step2")} />
-      </Funnel.Step>
-      <Funnel.Step name="step2">
-        <ProfileStep onPrev={() => Funnel.setStep("step1")} onNext={() => Funnel.setStep("step3")} />
-      </Funnel.Step>
-      <Funnel.Step name="step3">
-        <ContactStep onPrev={() => Funnel.setStep("step2")} onNext={() => Funnel.setStep("step4")} />
-      </Funnel.Step>
-      <Funnel.Step name="step4">
-        {/* 임의로 serverId 부여 */}
-        <InterestStep onPrev={() => Funnel.setStep("step3")} onNext={() => navigate("/:1/home")} />
-      </Funnel.Step>
-    </Funnel>
+    <div css={s.wrapperStyle}>
+      <img src={logo1Img} alt="로고1" css={s.logo1Style} />
+      <img src={logo2Img} alt="로고2" css={s.logo2Style} />
+      <Funnel>
+        <Funnel.Step name="step1">
+          <InfoStep onNext={() => Funnel.setStep("step2")} />
+        </Funnel.Step>
+        <Funnel.Step name="step2">
+          <ProfileStep
+            onPrev={() => Funnel.setStep("step1")}
+            onNext={() => Funnel.setStep("step3")}
+          />
+        </Funnel.Step>
+        <Funnel.Step name="step3">
+          <ContactStep
+            onPrev={() => Funnel.setStep("step2")}
+            onNext={() => Funnel.setStep("step4")}
+          />
+        </Funnel.Step>
+        <Funnel.Step name="step4">
+          {/* 임의로 serverId 부여 */}
+          <InterestStep
+            onPrev={() => Funnel.setStep("step3")}
+            onNext={() => navigate("/:1/home")}
+          />
+        </Funnel.Step>
+      </Funnel>
+    </div>
   );
 };
 
