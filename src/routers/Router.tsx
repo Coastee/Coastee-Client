@@ -1,6 +1,7 @@
 import App from "@/App";
 import { HomePage } from "@/pages/HomePage/HomePage";
 import OnBoardingPage from "@/pages/OnboardingPage/OnboardingPage";
+import SignupPage from "@/pages/SignupPage/SignupPage";
 import { Outlet, createBrowserRouter } from "react-router-dom";
 
 export const router = createBrowserRouter([
@@ -11,6 +12,10 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <OnBoardingPage />,
+      },
+      {
+        path: "/signup",
+        element: <SignupPage />,
       },
     ],
   },
