@@ -1,11 +1,14 @@
 import logo1Img from "@/assets/img/logo1Img.png";
 import logo2Img from "@/assets/img/logo2Img.png";
 import { useFunnel } from "@/hooks/useFunnel";
+import {
+  ContactStep,
+  InfoStep,
+  InterestStep,
+  ProfileStep,
+} from "@/pages/SignupPage";
 import * as s from "@/pages/SignupPage/SignupPage.styles";
-import ContactStep from "@/pages/SignupPage/components/ContactStep/ContactStep";
-import InfoStep from "@/pages/SignupPage/components/InfoStep/InfoStep";
-import InterestStep from "@/pages/SignupPage/components/InterestStep/InterestStep";
-import ProfileStep from "@/pages/SignupPage/components/ProfileStep/ProfileStep";
+
 import { useNavigate } from "react-router-dom";
 
 const SignupPage = () => {
