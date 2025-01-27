@@ -6,3 +6,5 @@ export { default as Input } from "./Input/Input";
 export { default as MenuHeader } from "./MenuHeader/MenuHeader";
 export { default as ServerHeader } from "./ServerHeader/ServerHeader";
 export { default as Textarea } from "./Textarea/Textarea";
+export { default as TitleContainer } from "./TitleContainer/TitleContainer";
+export { default as Dropdown } from "./Dropdown/Dropdown";

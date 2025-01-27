@@ -1,3 +1,4 @@
+export { default as ArrowDownIcon } from "./ArrowDownIcon";
 export { default as ChatIcon } from "./ChatIcon";
 export { default as CoffeeIcon } from "./CoffeeIcon";
 export { default as GoogleIcon } from "./GoogleIcon";
