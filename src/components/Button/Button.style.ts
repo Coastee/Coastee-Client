@@ -68,5 +68,8 @@ export const variantStyles: Record<
     margin-left: auto;
 
     ${textBaseStyle};
+    :hover {
+      scale: 1;
+    }
   `,
 };
