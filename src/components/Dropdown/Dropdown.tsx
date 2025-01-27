@@ -1,5 +1,4 @@
 import type { DropdownOptionTypes } from "@/constants/dropdown";
-import type React from "react";
 import * as s from "./Dropdown.styles";
 
 interface DropdownProps {
@@ -9,12 +8,12 @@ interface DropdownProps {
   setDropdownOpen: (open: boolean) => void;
 }
 
-const Dropdown: React.FC<DropdownProps> = ({
+const Dropdown = ({
   options,
   setItem,
   dropDownOpen,
   setDropdownOpen,
-}) => {
+}: DropdownProps) => {
   const handleItemClick = (item: DropdownOptionTypes) => {
     setItem(item);
     setDropdownOpen(false);
