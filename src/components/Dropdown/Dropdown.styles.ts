@@ -11,10 +11,6 @@ export const containerStyle = css`
   margin-top: 4rem;
 
   padding: 0.8rem;
-
-  /* width: 103px;
-  height: 70px; */
-
   border: 1px solid ${theme.color.dark1};
   border-radius: 0.8rem;
 
