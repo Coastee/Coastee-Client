@@ -6,14 +6,19 @@ export const containerStyle = css`
 
   flex-direction: column;
   row-gap: 0.3rem;
+  flex-shrink: 0;
 
   margin-top: 4rem;
 
-  padding: 0.5rem;
+  padding: 0.8rem;
 
-  border-radius: 1rem;
+  /* width: 103px;
+  height: 70px; */
 
-  background-color: ${theme.color.dark1};
+  border: 1px solid ${theme.color.dark1};
+  border-radius: 0.8rem;
+
+  background-color: ${theme.color.dark3};
 
   z-index: 1;
 `;
@@ -24,21 +29,17 @@ export const listBarStyle = css`
 
   padding: 0 1.2rem;
 
-  width: 100%;
-  height: 2.5rem;
+  width: 10rem;
+  height: 2.6rem;
 
-  border-radius: 0.8rem;
-
-  background-color: ${theme.color.dark1};
+  border-radius: 0.6rem;
 
   ${theme.font.body2};
-  color: ${theme.color.gray2};
+  color: ${theme.color.primaryBlue1};
 
   cursor: pointer;
 
   &:hover {
-    color: ${theme.color.white};
-
-    background-color: ${theme.color.dark0};
+    background-color: ${theme.color.dark2};
   }
 `;
