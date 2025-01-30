@@ -46,6 +46,7 @@ export const listTitleStyle = css`
 
   ${theme.font.body1};
   color: ${theme.color.white};
+  font-weight: 500;
 
   overflow: hidden;
 
@@ -89,8 +90,6 @@ export const circle = css`
 `;
 
 export const thumbnailImgStyle = css`
-  width: 100%;
-  height: 100%;
   min-width: 7.6rem;
   min-height: 7.6rem;
   max-width: 7.6rem;
@@ -98,12 +97,15 @@ export const thumbnailImgStyle = css`
 
   overflow: hidden;
 
-  border-radius: 10px;
-
   object-fit: cover;
+
+  border-radius: 10px;
 `;
 
-export const hrStyle = css`
-  border: 0.5px solid #414e5f;
-  margin: 0.5rem 1.3rem;
+export const DividerStyle = css`
+  padding: 0.5rem 1.3rem;
+
+  hr {
+    background-color: #414e5f;
+  }
 `;

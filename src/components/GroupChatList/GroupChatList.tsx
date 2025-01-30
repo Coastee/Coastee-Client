@@ -1,4 +1,5 @@
 import { RotateLogoIcon } from "@/assets/svg";
+import Divider from "@/components/Divider/Divider";
 import * as s from "@/components/GroupChatList/GroupChatList.styles";
 import { CHAT_ROOMS_DUMMY } from "@/dummy/chatRoomsDummy";
 
@@ -11,7 +12,7 @@ const GroupChatList = () => {
             <div css={s.infoLayoutStyle}>
               <div css={s.textLayoutStyle}>
                 <RotateLogoIcon width={20} style={{ minWidth: "2rem" }} />
-                <p css={s.listTitleStyle}>{chat.title}</p>
+                <h1 css={s.listTitleStyle}>{chat.title}</h1>
                 <p css={s.circle} />
                 <p css={s.listUsersStyle}>
                   {chat.currentUsers}/{chat.maxUsers}명
@@ -21,11 +22,11 @@ const GroupChatList = () => {
             </div>
             <img
               src={chat.imgSrc}
-              alt="예시 이미지"
+              alt="그룹 채팅 썸네일"
               css={s.thumbnailImgStyle}
             />
           </li>
-          {idx < 2 && <hr css={s.hrStyle} />}
+          {idx < 2 && <Divider css={s.DividerStyle} />}
         </>
       ))}
     </ul>
