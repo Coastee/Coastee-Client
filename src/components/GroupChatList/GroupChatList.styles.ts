@@ -20,6 +20,8 @@ export const listItemStyle = css`
   padding: 0.8rem 1.8rem;
 
   width: 100%;
+
+  cursor: pointer;
 `;
 
 export const infoLayoutStyle = css`
@@ -90,10 +92,10 @@ export const circle = css`
 `;
 
 export const thumbnailImgStyle = css`
-  min-width: 7.6rem;
-  min-height: 7.6rem;
-  max-width: 7.6rem;
-  max-height: 7.6rem;
+  width: 7.6rem;
+  height: 7.6rem;
+
+  flex-shrink: 0;
 
   overflow: hidden;
 
