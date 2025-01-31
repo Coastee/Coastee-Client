@@ -32,12 +32,27 @@ export const nameStyle = css`
   white-space: nowrap;
 `;
 
+export const descLayoutStyle = css`
+  display: inline-flex;
+
+  align-items: center;
+  gap: 0.8rem;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+`;
+
 export const descStyle = css`
   color: ${theme.color.gray1};
 
   ${theme.font.body2};
 
   white-space: nowrap;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 `;
 
 export const imgStyle = css`

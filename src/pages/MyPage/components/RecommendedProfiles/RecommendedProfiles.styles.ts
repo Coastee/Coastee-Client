@@ -14,6 +14,8 @@ export const titleStyle = css`
 `;
 
 export const listWrapperStyle = css`
+  width: 41.1rem;
+
   padding: 2rem;
 
   border-radius: 10px;

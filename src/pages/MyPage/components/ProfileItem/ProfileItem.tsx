@@ -19,11 +19,11 @@ const ProfileItem = ({ data }: ProfileItemProps) => {
         <img src={data.img} alt="프로필" css={s.imgStyle} />
         <div css={s.itemLayoutStyle}>
           <h2 css={s.nameStyle}>{data.name}</h2>
-          <div css={{ display: "flex", alignItems: "center", gap: "0.8rem" }}>
-            <p css={s.descStyle}>{data.intro}</p>
-            <MiddlePointIcon width={3} height={3} />
+          <div css={s.descLayoutStyle}>
+            <p css={[s.descStyle, { maxWidth: "10rem" }]}>{data.intro}</p>
+            <MiddlePointIcon width={3} height={3} css={{ flexShrink: "0" }} />
             <p css={s.descStyle}>{data.experience}년차</p>
-            <MiddlePointIcon width={3} height={3} />
+            <MiddlePointIcon width={3} height={3} css={{ flexShrink: "0" }} />
             <p css={s.descStyle}>{data.role}</p>
           </div>
         </div>
