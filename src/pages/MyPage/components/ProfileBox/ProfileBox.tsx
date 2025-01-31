@@ -27,15 +27,12 @@ const ProfileBox = () => {
             <DmIcon width={12} height={12} css={{ flexShrink: "0" }} />
             DM
           </Button>
-          <div>
+          <div css={s.linkLayoutStyle}>
             {DUMMY_PROFILE.urls.map((url) => (
-              // biome-ignore lint/a11y/useAnchorContent: <explanation>
-              <a
-                href={url}
-                key={url}
-                aria-label={`route to ${url}`}
-                css={s.linkStyle}
-              />
+              <div key={url} aria-label={`route to ${url}`} css={s.linkStyle}>
+                {/* biome-ignore lint/a11y/useAnchorContent: <explanation> */}
+                <a href={url} />
+              </div>
             ))}
           </div>
         </div>

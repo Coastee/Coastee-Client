@@ -21,9 +21,21 @@ export const layoutStyle = css`
   background-color: ${theme.color.dark3};
 `;
 
+export const linkLayoutStyle = css`
+  display: flex;
+
+  margin-left: auto;
+
+  gap: 0.8rem;
+`;
+
 export const linkStyle = css`
   width: 3.3rem;
   height: 3.3rem;
+
+  border-radius: 8px;
+
+  background: ${theme.color.dark2};
 `;
 
 export const nameStyle = css`
@@ -41,6 +53,8 @@ export const introStyle = css`
   height: 5.1rem;
 
   overflow: scroll;
+
+  scroll-behavior: smooth;
 
   ${theme.font.body2};
 `;
