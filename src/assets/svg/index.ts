@@ -14,5 +14,6 @@ export { default as Logo4Icon } from "./Logo4Icon";
 export { default as Logo4WhiteIcon } from "./Logo4WhiteIcon";
 export { default as NaverIcon } from "./NaverIcon";
 export { default as PlusIcon } from "./PlusIcon";
+export { default as ProfileIcon } from "./ProfileIcon";
 export { default as RotateLogoIcon } from "./RotateLogoIcon";
 export { default as Vite } from "./Vite";
