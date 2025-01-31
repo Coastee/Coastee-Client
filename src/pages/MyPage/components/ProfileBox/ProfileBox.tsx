@@ -29,10 +29,9 @@ const ProfileBox = () => {
           </Button>
           <div css={s.linkLayoutStyle}>
             {DUMMY_PROFILE.urls.map((url) => (
-              <div key={url} aria-label={`route to ${url}`} css={s.linkStyle}>
-                {/* biome-ignore lint/a11y/useAnchorContent: <explanation> */}
-                <a href={url} />
-              </div>
+              <a href={url} key={url} target="_blank" rel="noreferrer">
+                <div aria-label={`route to ${url}`} css={s.linkStyle} />
+              </a>
             ))}
           </div>
         </div>
