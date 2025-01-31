@@ -27,13 +27,15 @@ const ProfileBox = () => {
             <DmIcon width={12} height={12} css={{ flexShrink: "0" }} />
             DM
           </Button>
-          <div css={s.linkLayoutStyle}>
+          <ul css={s.linkLayoutStyle}>
             {DUMMY_PROFILE.urls.map((url) => (
-              <a href={url} key={url} target="_blank" rel="noreferrer">
-                <div aria-label={`route to ${url}`} css={s.linkStyle} />
-              </a>
+              <li key={url}>
+                <a href={url} target="_blank" rel="noreferrer">
+                  <div aria-label={`route to ${url}`} css={s.linkStyle} />
+                </a>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
         <p css={s.oneLineIntroStyle}>{DUMMY_PROFILE.oneLineIntro}</p>
         <p css={s.introStyle}>{DUMMY_PROFILE.Intro}</p>
