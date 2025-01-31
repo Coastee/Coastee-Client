@@ -5,8 +5,10 @@ import type { ButtonProps } from "./Button";
 
 export const buttonStyle = css`
   display: flex;
+
   justify-content: center;
   align-items: center;
+
   gap: 0.8rem;
 
   padding: 1rem 2.6rem;
@@ -27,6 +29,13 @@ export const buttonStyle = css`
 
   &:disabled {
   }
+`;
+
+const textBaseStyle = css`
+  padding: 1rem;
+
+  ${theme.font.body1};
+  color: ${theme.color.primaryBlue1};
 `;
 
 export const variantStyles: Record<
@@ -60,9 +69,18 @@ export const variantStyles: Record<
   `,
 
   text: css`
-    padding: 1rem;
-
-    color: ${theme.color.primaryBlue1};
+    ${textBaseStyle};
     text-decoration: underline;
+  `,
+
+  sorting: css`
+    gap: 0.6rem;
+
+    margin-left: auto;
+
+    ${textBaseStyle};
+    :hover {
+      scale: 1;
+    }
   `,
 };

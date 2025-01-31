@@ -39,7 +39,7 @@ export const titleStyle = css`
   color: ${theme.color.white};
 
   font-weight: 600;
-  ${theme.font.title};
+  ${theme.font.title1};
 
   white-space: nowrap;
 `;
