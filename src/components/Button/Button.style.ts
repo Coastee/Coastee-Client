@@ -24,6 +24,9 @@ export const buttonStyle = css`
   &:hover {
     scale: 1.02;
   }
+
+  &:disabled {
+  }
 `;
 
 export const variantStyles: Record<
