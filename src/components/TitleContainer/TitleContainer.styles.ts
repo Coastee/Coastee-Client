@@ -1,7 +1,11 @@
 import { theme } from "@/styles/theme/theme";
 import { css } from "@emotion/react";
 
-export const titleContainerStyle = css``;
+export const titleContainerStyle = css`
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+`;
 
 export const headerStyle = css`
   display: flex;
